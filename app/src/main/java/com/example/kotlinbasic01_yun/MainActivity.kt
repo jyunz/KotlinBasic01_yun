@@ -3,6 +3,7 @@ package com.example.kotlinbasic01_yun
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,12 @@ class MainActivity : AppCompatActivity() {
             Log.d("메인화면","클릭용 버튼 눌림")
 //            tag는 종류를 나눌때 씀.
             Log.e("메인화면로그","에러관련로그")
+        }
+
+        smallBtn.setOnClickListener {
+
+            Toast.makeText(this, "작은버튼이 눌림", Toast.LENGTH_SHORT).show()
+
         }
     }
 }
